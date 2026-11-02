@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-$primary-font: "Roboto", sans-serif;
+$primary-font:  "Roboto", sans-serif;
 $primary-white: #FFF;
 $primary-color: #43C3D1;
 $primary-black: #061123;
@@ -88,4 +88,12 @@ ul {
       color: $primary-white;
     }
   }
+}
+
+header{
+    .nav-link{
+        font-size: 1.2em;
+        font-weight: 500;
+        color:-primary-black;
+    }
 }
