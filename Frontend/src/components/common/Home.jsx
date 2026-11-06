@@ -87,6 +87,14 @@ const Home = () => {
         <div className='product-card border-0'>
         <div className='card-img'>
            <img src={ProductImg} alt="" className='w-100'/>
+           <div className='card-body pt-3'>
+          <a href="">Textured</a>
+          <div className='prce'>
+            ksh 1,800 <span className='text-decoration-line-through'>2000</span>
+
+          </div>
+        
+           </div>
         </div>
         </div>
         </div>
