@@ -103,6 +103,20 @@ header{
    }
 }
 
-header .navbar-expand-lg .navbar-nav .nav-link{
-   
+
+.section-1{
+   .swiper{
+    .swiper-wrapper{
+        .swiper-slide{
+             height: 750px;;
+            .content{
+              height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+   }
 }

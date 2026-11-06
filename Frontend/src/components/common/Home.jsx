@@ -4,8 +4,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from "../../assets/logo.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import SliderOneImg from '../../assets/Images/banner-1.jpg';
-import SliderTwoImg from '../../assets/Images/banner-2.jpg';
+import SliderOneImg from '../../assets/Images/banner-1.jpeg';
+import SliderTwoImg from '../../assets/Images/banner-2.jpeg';
+import ProductImg from '../../assets/Images/Photoo.jpeg';
 
 
 const Home = () => {
@@ -44,7 +45,7 @@ const Home = () => {
         <div className='nav-right d-flex'>
             <a href="" className='ms-3'>
               
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16"><path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" fill="currentColor" className="bi bi-bag" viewBox="0 0 16 16"><path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"></path></svg>
             </a>
         </div>
 
@@ -75,6 +76,24 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </section>
+
+      <section className='section-2 py-5'> 
+        <div className='container'> 
+        <h2>
+          New Arrivals
+        </h2>
+        <div className='row mt-4'>
+        <div className='col-md-3'>
+        <div className='product-card border-0'>
+        <div className='card-img'>
+           <img src={ProductImg} alt="" className='w-100'/>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        </section>
     </>
   )
 }
