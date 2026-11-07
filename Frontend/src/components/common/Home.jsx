@@ -6,7 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import SliderOneImg from '../../assets/Images/banner-1.jpeg';
 import SliderTwoImg from '../../assets/Images/banner-2.jpeg';
-import ProductImg from '../../assets/Images/Photoo.jpeg';
+//import LatestProducts from './common/LatestProducts';
+import LatestProducts from './LatestProducts';
+
 
 
 const Home = () => {
@@ -77,31 +79,8 @@ const Home = () => {
         </Swiper>
       </section>
 
-      <section className='section-2 py-5'> 
-        <div className='container'> 
-        <h2>
-          New Arrivals
-        </h2>
-        <div className='row mt-4'>
-        <div className='col-md-3'>
-        <div className='product-card border-0'>
-        <div className='card-img'>
-           <img src={ProductImg} alt="" className='w-100'/>
-           <div className='card-body pt-3'>
-          <a href="">Textured</a>
-          <div className='prce'>
-            ksh 1,800 <span className='text-decoration-line-through'>2000</span>
-
-          </div>
-        
-           </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        </section>
+      
+      <LatestProducts/>
     </>
   )
 }

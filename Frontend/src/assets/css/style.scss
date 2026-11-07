@@ -123,9 +123,17 @@ header{
 
    .product-card{
     .card-img{
+      overflow: hidden;
+      border-radius: 10px;
       img{
     border-radius: 10px;
+    transition: all 0.3s ease-out;
       }
+   }
+   &:hover{
+    img{
+      scale: 1.2;
+    }
    }
    .card-body{
     padding: 0;
@@ -139,7 +147,7 @@ header{
       //font-weight: 500;
       //color: $primary-color;
       span{
-        color: rgba($color: $primary-black, 0.5);
+        color: rgba($primary-black, 0.5);
       }
     }
    }
