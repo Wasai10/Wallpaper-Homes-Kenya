@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductImg from '../../assets/images/Photoo.jpeg';
 
 const FeaturedProducts = () => {
   return (
