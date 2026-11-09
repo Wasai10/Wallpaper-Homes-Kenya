@@ -115,6 +115,17 @@ header {
       }
     }
   }
+
+  // --- Profile and Shopping Bag Icons ---
+  .nav-right {
+    a {
+      color: $primary-white;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
 }
 
 // --- Top Strip ---
@@ -165,13 +176,14 @@ footer {
 
     img {
       border-radius: 10px;
-      transition: all 0.3s ease-out;
+      transform: scale(1);
+      transition: transform 0.3s ease-out;
     }
   }
 
   &:hover {
     img {
-      scale: 1.2;
+      transform: scale(1.2);
     }
   }
 
