@@ -1,8 +1,7 @@
-//@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-$primary-font:  "Roboto", sans-serif;
+$primary-font: "Roboto", sans-serif;
 $primary-white: #FFF;
 $primary-color: #43C3D1;
 $primary-black: #061123;
@@ -26,18 +25,19 @@ h2 {
   font-size: 2em;
 }
 
-h3{
-    font-size: 1.3em;
+h3 {
+  font-size: 1.3em;
 }
 
-h4{
-    font-size: 1em;
+h4 {
+  font-size: 1em;
 }
 
 // --- Links ---
 a {
   text-decoration: none;
   color: $primary-black;
+
   &:hover {
     color: $primary-color;
   }
@@ -55,6 +55,7 @@ a {
 // --- Lists & Containers ---
 ul {
   padding-left: 0;
+
   li {
     list-style: none;
   }
@@ -70,6 +71,7 @@ ul {
     background-color: $primary-color;
     border-color: $primary-color;
     padding: 7px 25px;
+
     &:hover {
       background-color: $primary-black;
       border-color: $primary-black;
@@ -82,6 +84,7 @@ ul {
     border-color: $primary-black;
     color: $primary-white;
     padding: 7px 25px;
+
     &:hover {
       background-color: $primary-color;
       border-color: $primary-color;
@@ -90,65 +93,101 @@ ul {
   }
 }
 
-header{
-   .navbar-expand-lg{
-    .navbar-nav{
-        .nav-link{
-             padding: 10px 15px;
-             font-size: 1.2em;
-             font-weight: 500;
-              color:-primary-black;
+// --- Header ---
+header {
+  background-color: $primary-black;
+
+  .navbar {
+    background-color: $primary-black !important;
+  }
+
+  .navbar-expand-lg {
+    .navbar-nav {
+      .nav-link {
+        padding: 10px 15px;
+        font-size: 1.2em;
+        font-weight: 500;
+        color: $primary-white;
+
+        &:hover {
+          color: $primary-color;
         }
-    }
-   }
-}
-
-
-.section-1{
-   .swiper{
-    .swiper-wrapper{
-        .swiper-slide{
-             height: 750px;;
-            .content{
-              height: 100%;
-                width: 100%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-        }
-    }
-   }
-}
-
-   .product-card{
-    .card-img{
-      overflow: hidden;
-      border-radius: 10px;
-      img{
-    border-radius: 10px;
-    transition: all 0.3s ease-out;
       }
-   }
-   &:hover{
-    img{
+    }
+  }
+}
+
+// --- Top Strip ---
+.top-strip {
+  background-color: $primary-color;
+  color: $primary-white;
+}
+
+// --- Footer ---
+footer {
+  background-color: $tertiary-color;
+  color: $primary-white;
+  padding: 40px 0;
+
+  a {
+    color: $primary-white;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// --- Homepage Slider ---
+.section-1 {
+  .swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        height: 750px;
+
+        .content {
+          height: 100%;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
+
+// --- Product Cards ---
+.product-card {
+  .card-img {
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      border-radius: 10px;
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  &:hover {
+    img {
       scale: 1.2;
     }
-   }
-   .card-body{
+  }
+
+  .card-body {
     padding: 0;
-    a{
+
+    a {
       font-size: 1.2em;
-      //font-weight: 500;
-      //color: $primary-black;
     }
-    .price{
+
+    .price {
       font-size: 1.2em;
-      //font-weight: 500;
-      //color: $primary-color;
-      span{
+
+      span {
         color: rgba($primary-black, 0.5);
       }
     }
-   }
   }
+}

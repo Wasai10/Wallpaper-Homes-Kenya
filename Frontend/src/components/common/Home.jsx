@@ -86,7 +86,7 @@ const Home = () => {
 
       <FeaturedProducts/>
 
-      <footer className='py-5'>
+      <footer className='py-5' text-white>
         <div className='container py-5'>
       <div className='row'>
         <div className='col-md-3'>
