@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from "../../assets/logo.png";
+import logoBlack from "../../assets/Images/Logo white.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import SliderOneImg from '../../assets/Images/banner-1.jpeg';
@@ -82,7 +83,29 @@ const Home = () => {
 
       
       <LatestProducts/>
+
       <FeaturedProducts/>
+
+      <footer className='py-5'>
+        <div className='container py-5'>
+      <div className='row'>
+        <div className='col-md-3'>
+      <img src={logoBlack} alt=""width={150} />
+      <p>Your wallpaper guru</p>
+        </div>
+      <div className='col-md-3'>
+
+      </div>
+      <div className='col-md-3'>
+
+      </div>
+      <div className='col-md-3'>
+
+      </div>
+
+      </div>
+        </div>
+      </footer>
     </>
   )
 }
