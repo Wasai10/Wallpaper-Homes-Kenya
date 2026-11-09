@@ -139,6 +139,16 @@ footer {
   background-color: $tertiary-color;
   color: $primary-white;
   padding: 40px 0;
+  ul{
+    li{
+       margin-bottom: 10px;
+      a{
+        font-size: 1.2em;
+        color: $primary-white;
+       
+      }
+    }
+  }
 
   a {
     color: $primary-white;

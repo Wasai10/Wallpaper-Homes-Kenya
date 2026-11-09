@@ -120,14 +120,52 @@ const Home = () => {
                 alt="Wallpaper Homes Kenya Logo"
                 width={150}
               />
-              <div className='pt-3'>Your wallpaper guru</div>
+              <div className='pt-3 pe-5'>Your wallpaper guru</div>
             </div>
 
-            <div className='col-md-3'></div>
+            <div className='col-md-3'>
+              <h2 className='mb-3'>Categories</h2>
+              <ul>
+                <li>
+                  <a href=''>Textured</a>
+                </li>
+                 <li>
+                  <a href=''>Flowered</a>
+                </li>
+                 <li>
+                  <a href=''>Soft</a>
+                </li>
+              </ul>
+            </div>
 
-            <div className='col-md-3'></div>
+            <div className='col-md-3'>
+              <h2 className='mb-3'>Quick Links</h2>
+              <ul>
+                <li>
+                  <a href=''>Login</a>
+                </li>
+                 <li>
+                  <a href=''>Register</a>
+                </li>
+                 <li>
+                  <a href=''>Soft</a>
+                </li>
+              </ul>
+            </div>
 
-            <div className='col-md-3'></div>
+            <div className='col-md-3'><h2 className='mb-3'>Get in touch</h2>
+              <ul>
+                <li>
+                  <a href=''>0113738019</a>
+                </li>
+                 <li>
+                  <a href=''>Tiktok</a>
+                </li>
+                 <li>
+                  <a href=''>Instagram</a>
+                </li>
+              </ul>
+              </div>
 
           </div>
         </div>
