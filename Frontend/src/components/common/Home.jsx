@@ -8,6 +8,7 @@ import SliderOneImg from '../../assets/Images/banner-1.jpeg';
 import SliderTwoImg from '../../assets/Images/banner-2.jpeg';
 //import LatestProducts from './common/LatestProducts';
 import LatestProducts from './LatestProducts';
+import FeaturedProducts from './FeaturedProducts';
 
 
 
@@ -81,6 +82,7 @@ const Home = () => {
 
       
       <LatestProducts/>
+      <FeaturedProducts/>
     </>
   )
 }
