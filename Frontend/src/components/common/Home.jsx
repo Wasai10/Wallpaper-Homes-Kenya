@@ -112,71 +112,78 @@ const Home = () => {
       {/* Footer */}
       <footer className='py-5 text-white'>
         <div className='container py-5'>
-          <div className='row'>
+                          <div className='row'>
 
-            <div className='col-md-3'>
-              <img
-                src={logoBlack}
-                alt="Wallpaper Homes Kenya Logo"
-                width={150}
-              />
-              <div className='pt-3 pe-5'>Your wallpaper guru</div>
-            </div>
+                            <div className='col-md-3'>
+                              <img
+                                src={logoBlack}
+                                alt="Wallpaper Homes Kenya Logo"
+                                width={150}
+                              />
+                              <div className='pt-3 pe-5'>Your wallpaper guru</div>
+                            </div>
 
-            <div className='col-md-3'>
-              <h2 className='mb-3'>Categories</h2>
-              <ul>
-                <li>
-                  <a href=''>Textured</a>
-                </li>
-                 <li>
-                  <a href=''>Flowered</a>
-                </li>
-                 <li>
-                  <a href=''>Soft</a>
-                </li>
-              </ul>
-            </div>
+                            <div className='col-md-3'>
+                              <h2 className='mb-3'>Categories</h2>
+                              <ul>
+                                <li>
+                                  <a href=''>Textured</a>
+                                </li>
+                                <li>
+                                  <a href=''>Flowered</a>
+                                </li>
+                                <li>
+                                  <a href=''>Soft</a>
+                                </li>
+                              </ul>
+                            </div>
 
-            <div className='col-md-3'>
-              <h2 className='mb-3'>Quick Links</h2>
-              <ul>
-                <li>
-                  <a href=''>Login</a>
-                </li>
-                 <li>
-                  <a href=''>Register</a>
-                </li>
-                 <li>
-                  <a href=''>Soft</a>
-                </li>
-              </ul>
-            </div>
+                            <div className='col-md-3'>
+                              <h2 className='mb-3'>Quick Links</h2>
+                              <ul>
+                                <li>
+                                  <a href=''>Login</a>
+                                </li>
+                                <li>
+                                  <a href=''>Register</a>
+                                </li>
+                                <li>
+                                  <a href=''>Soft</a>
+                                </li>
+                              </ul>
+                            </div>
 
-            <div className='col-md-3'><h2 className='mb-3'>Get in touch</h2>
-              <ul>
-                <li>
-                  <a href=''>0113738019</a>
-                </li>
-                 <li>
-                  <a href=''>Tiktok</a>
-                </li>
-                 <li>
-                  <a href=''>Instagram</a>
-                </li>
-              </ul>
-              </div>
+                            <div className='col-md-3'><h2 className='mb-3'>Get in touch</h2>
+                              <ul>
+                                <li>
+                                  <a href=''>0113738019</a>
+                                </li>
+                                <li>
+                                  <a href=''>Tiktok</a>
+                                </li>
+                                <li>
+                                  <a href=''>Instagram</a>
+                                </li>
+                              </ul>
+                              </div>
 
-          </div>
-          <div className='row'>
-          <div className='col-md-4'>
-          <h3>Free Delivery</h3>
-          </div>
-           <div className='col-md-4'>
-           <h3>Money back guarantee</h3>
-          </div>
-           <div className='col-md-4'>
-            <h3>Secure Payments</h3>
+                            </div>
+                              <div className='row'>
+                            <div className='col-md-4'>
+                          <div className='d-flex justify-content-center'>
+                          <h3>Free Delivery</h3>
+                          </div>
+                          </div>
+                          <div className='col-md-4'>
+                            <div className='d-flex justify-content-center'>
+                          <h3>Money back guarantee</h3>
+                          </div>
+                          </div>
+                          <div className='col-md-4'>
+                            <div className='d-flex justify-content-center'>
+                          <h3>Secure payments</h3>
+                          </div>
+                  
           </div>
           </div>
         </div>
