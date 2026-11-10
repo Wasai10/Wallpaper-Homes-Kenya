@@ -141,7 +141,7 @@ footer {
   padding: 40px 0;
   h2{
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   ul{
     li{
@@ -160,6 +160,12 @@ footer {
     &:hover {
       color: $primary-color;
     }
+  }
+  .spotlight{
+    border-top: 1px solid rgba($primary-white, 0.25);
+    //margin-top: 24px;
+    //padding-top: 24px;
+     border-bottom: 1px solid rgba($primary-white, 0.25);
   }
 }
 
