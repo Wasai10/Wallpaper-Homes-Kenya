@@ -168,6 +168,17 @@ const Home = () => {
               </div>
 
           </div>
+          <div className='row'>
+          <div className='col-md-4'>
+          <h3>Free Delivery</h3>
+          </div>
+           <div className='col-md-4'>
+           <h3>Money back guarantee</h3>
+          </div>
+           <div className='col-md-4'>
+            <h3>Secure Payments</h3>
+          </div>
+          </div>
         </div>
       </footer>
     </>
