@@ -36,7 +36,7 @@ const LatestProducts = () => {
         <h2>Featured Products</h2>
         <div className="row mt-4">
           {products.map(({ name, price, previousPrice, alt }) => (
-            <div className="col-md-3" key={name}>
+            <div className="col-md-3, col-6" key={name}>
               <div className="product-card card border-0">
                 <div className="card-img">
                   <img src={ProductImg} alt={alt} className="w-100" />
