@@ -1,20 +1,28 @@
-import React from 'react'
+import React from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import LatestProducts from './LatestProducts';
 import FeaturedProducts from './FeaturedProducts';
 import Footer from './Footer';
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <>
+    <div className="site-layout-wrapper d-flex flex-column min-vh-100 bg-white">
       <Header />
-      <Hero />
-      <LatestProducts />
-      <FeaturedProducts />
+      <main className="flex-grow-1">
+        {children ? (
+          children
+        ) : (
+          <>
+            <Hero />
+            <LatestProducts />
+            <FeaturedProducts />
+          </>
+        )}
+      </main>
       <Footer />
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;

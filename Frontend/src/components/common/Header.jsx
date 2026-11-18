@@ -1,69 +1,201 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from "../../assets/logo.png";
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 const Header = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
   return (
-   <header className='shadow'>
-        <div className='top-strip text-center py-3'>
-          <span className='text-white'>Your wallpaper guru</span>
+    <header className="site-header shadow-sm bg-white">
+      {/* Top Notification Strip */}
+      <div className="top-strip py-2">
+        <div className="container d-flex flex-wrap align-items-center justify-content-between text-white small">
+          {/* Phone */}
+          <div className="d-flex align-items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="currentColor"
+              className="bi bi-telephone-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+              />
+            </svg>
+            <span className="fw-medium">+001234567890</span>
+          </div>
+
+          {/* Promo Offer */}
+          <div className="d-none d-md-flex align-items-center text-center">
+            <span>
+              Get 50% Off on Selected Items &nbsp;|&nbsp;{' '}
+              <Link to="/shop" className="text-white fw-bold text-decoration-underline ms-1">
+                Shop Now
+              </Link>
+            </span>
+          </div>
+
+          {/* Language & Location Selectors */}
+          <div className="d-flex align-items-center gap-3">
+            <div className="dropdown">
+              <span className="dropdown-toggle cursor-pointer" role="button">
+                Eng
+              </span>
+            </div>
+            <div className="dropdown">
+              <span className="dropdown-toggle cursor-pointer" role="button">
+                Location
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className='container'>
-          <Navbar expand="lg" className="bg-body-tertiary">
+      {/* Main Navigation */}
+      <div className="container">
+        <Navbar expand="lg" className="py-3 bg-white">
+          {/* Brand Logo - Shopcart design */}
+          <Navbar.Brand as={Link} to="/" className="d-flex align-items-center gap-2 me-lg-4">
+            <div className="logo-cart-icon">
+              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Sprout Leaf */}
+                <path
+                  d="M19 4C19 4 23 4.5 24.5 8C26 11.5 23.5 14 20 14.5C18.5 12 18 8 19 4Z"
+                  fill="#10B981"
+                />
+                <path
+                  d="M17 9C17 9 13.5 10 12.5 13C11.5 16 13.5 18 16 18C17 16 17.5 12.5 17 9Z"
+                  fill="#F97316"
+                />
+                {/* Cart Body */}
+                <path
+                  d="M8 12H28L25.5 23H10.5L8 12Z"
+                  stroke="#003d29"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                {/* Cart Handle */}
+                <path
+                  d="M4 8H7.5L8 12"
+                  stroke="#003d29"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                {/* Wheels */}
+                <circle cx="12" cy="27" r="2.2" fill="#003d29" />
+                <circle cx="24" cy="27" r="2.2" fill="#003d29" />
+              </svg>
+            </div>
+            <span className="brand-title fw-bolder fs-4" style={{ color: '#003d29', letterSpacing: '-0.5px' }}>
+              Shopcart
+            </span>
+          </Navbar.Brand>
 
-            <Navbar.Brand href="#">
-              <img src={logo} alt="Wallpaper Homes Kenya Logo" width="170" height="100" />
-            </Navbar.Brand>
+          <Navbar.Toggle aria-controls="main-navbar-nav" />
 
-            <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="main-navbar-nav">
+            {/* Nav Menu Links */}
+            <Nav className="me-auto my-2 my-lg-0 align-items-lg-center">
+              <NavDropdown title="Categories" id="categories-dropdown" className="nav-dropdown-custom">
+                <NavDropdown.Item as={Link} to="/shop">Soft</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/shop">Textured</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/shop">Patterned</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item as={Link} to="/shop">All Categories</NavDropdown.Item>
+              </NavDropdown>
 
-            <Navbar.Collapse id="navbarScroll">
-              <Nav
-                className="ms-auto my-2 my-lg-0"
-                style={{ maxHeight: '100px' }}
-                navbarScroll
-              >
-                <Nav.Link href="#action1">Soft</Nav.Link>
-                <Nav.Link href="#action2">Textured</Nav.Link>
-                <Nav.Link href="#action3">Patterned</Nav.Link>
-              </Nav>
+              <Nav.Link as={Link} to="/shop" className="nav-link-custom">
+                Deals
+              </Nav.Link>
+              <Nav.Link as={Link} to="/shop" className="nav-link-custom">
+                What's New
+              </Nav.Link>
+              <Nav.Link as={Link} to="/shop" className="nav-link-custom">
+                Delivery
+              </Nav.Link>
+            </Nav>
 
-              {/* Profile and Shopping Bag Icons */}
-              <div className='nav-right d-flex align-items-center'>
-
-                <a href="" className='ms-3' aria-label="Profile">
+            {/* Search Pill Input */}
+            <div className="header-search-box mx-lg-3 my-2 my-lg-0">
+              <div className="search-pill-wrapper d-flex align-items-center">
+                <input
+                  type="text"
+                  placeholder="Search Product"
+                  className="search-input"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button type="button" className="search-btn" aria-label="Search">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    fill="currentColor"
-                    className="bi bi-person"
-                    viewBox="0 0 16 16"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="bi bi-search"
+                    viewBox="0 0 24 24"
                   >
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"></path>
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                   </svg>
-                </a>
-
-                <a href="" className='ms-3' aria-label="Shopping bag">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="28"
-                    fill="currentColor"
-                    className="bi bi-bag"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"></path>
-                  </svg>
-                </a>
-
+                </button>
               </div>
-            </Navbar.Collapse>
-          </Navbar>
-        </div>
-      </header>
-  )
-}
+            </div>
 
-export default Header
+            {/* Action Items: Account & Cart */}
+            <div className="d-flex align-items-center gap-4 ms-lg-2">
+              <Link to="/shop" className="nav-action-item d-flex align-items-center gap-2 text-decoration-none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span className="fw-semibold text-dark">Account</span>
+              </Link>
+
+              <Link to="/shop" className="nav-action-item d-flex align-items-center gap-2 text-decoration-none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span className="fw-semibold text-dark">Cart</span>
+              </Link>
+            </div>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

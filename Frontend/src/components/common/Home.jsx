@@ -1,20 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Layout from './Layout';
+import Hero from './Hero';
 import LatestProducts from './LatestProducts';
 import FeaturedProducts from './FeaturedProducts';
-import Header from './Header';
-import Hero from './Hero';
-import Layout from './Layout';
 
 const Home = () => {
   return (
-    <>
-      <Layout>
-        {/* <Hero/>
-        <LatestProducts/>
-        <FeaturedProducts/> */}
-      </Layout>
-    </>
-  )
-}
+    <Layout>
+      <Hero />
+      <LatestProducts />
+      <FeaturedProducts />
+    </Layout>
+  );
+};
 
-export default Home
+export default Home;

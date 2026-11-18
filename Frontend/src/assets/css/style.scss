@@ -1,236 +1,461 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap');
 
-$primary-font: "Roboto", sans-serif;
-$primary-white: #FFF;
-$primary-color: #43C3D1;
-$primary-black: #061123;
-$secondary-color: #0284FF;
-$tertiary-color: #2F4858;
+// --- Brand Variables Matching Reference Design ---
+$primary-font: 'Plus Jakarta Sans', 'Roboto', sans-serif;
+$primary-white: #ffffff;
+$primary-green: #003d29;       // Deep Forest Green
+$primary-green-dark: #002b1d;
+$primary-green-light: #00473e;
+$accent-cream: #FBF0E4;        // Hero Cream Background
+$card-bg-gray: #F5F6F6;        // Soft Product Card Background
+$pill-bg: #F3F4F6;             // Filter Pill Background
+$text-dark: #111827;
+$text-muted: #6B7280;
+$border-light: #E5E7EB;
+
+// Backward-compatible color variables
+$primary-color: $primary-green;
+$primary-black: $text-dark;
+$secondary-color: #0b4d3c;
+$tertiary-color: $primary-green;
 
 // --- Global Styles ---
 body {
   font-family: $primary-font;
-  font-size: 1em;
-  color: $primary-black;
-  font-weight: 500;
-}
-
-// --- Typography ---
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.3em;
-}
-
-h4 {
-  font-size: 1em;
-}
-
-// --- Links ---
-a {
-  text-decoration: none;
-  color: $primary-black;
-
-  &:hover {
-    color: $primary-color;
-  }
-}
-
-// --- Text Utilities ---
-.primary-text {
-  color: $primary-color;
-}
-
-.secondary-text {
-  color: $secondary-color;
-}
-
-// --- Lists & Containers ---
-ul {
-  padding-left: 0;
-
-  li {
-    list-style: none;
-  }
+  font-size: 15px;
+  color: $text-dark;
+  background-color: $primary-white;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1320px;
 }
 
-// --- Buttons ---
-.btn {
-  &.btn-primary {
-    background-color: $primary-color;
-    border-color: $primary-color;
-    padding: 7px 25px;
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
 
-    &:hover {
-      background-color: $primary-black;
-      border-color: $primary-black;
-      color: $primary-white;
-    }
-  }
-
-  &.btn-secondary {
-    background-color: $primary-black;
-    border-color: $primary-black;
-    color: $primary-white;
-    padding: 7px 25px;
-
-    &:hover {
-      background-color: $primary-color;
-      border-color: $primary-color;
-      color: $primary-white;
-    }
+  &:hover {
+    color: $primary-green;
   }
 }
 
-// --- Header ---
-header {
-  background-color: $primary-black;
+ul {
+  padding-left: 0;
+  list-style: none;
+}
 
-  .navbar {
-    background-color: $primary-black !important;
+// --- Header Styling ---
+.site-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.top-strip {
+  background-color: $primary-green;
+  font-size: 0.85rem;
+  letter-spacing: 0.2px;
+
+  .dropdown-toggle::after {
+    margin-left: 0.35em;
+    vertical-align: 0.2em;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
   }
+}
 
-  .navbar-expand-lg {
-    .navbar-nav {
-      .nav-link {
-        padding: 10px 15px;
-        font-size: 1.2em;
-        font-weight: 500;
-        color: $primary-white;
+.navbar-brand {
+  .brand-title {
+    font-family: $primary-font;
+    font-weight: 800;
+  }
+}
 
-        &:hover {
-          color: $primary-color;
-        }
-      }
+.nav-link-custom {
+  font-weight: 600 !important;
+  color: #1F2937 !important;
+  padding: 8px 16px !important;
+  font-size: 0.95rem;
+
+  &:hover {
+    color: $primary-green !important;
+  }
+}
+
+.nav-dropdown-custom {
+  .dropdown-toggle {
+    font-weight: 600 !important;
+    color: #1F2937 !important;
+    padding: 8px 16px !important;
+    font-size: 0.95rem;
+
+    &:hover {
+      color: $primary-green !important;
     }
   }
 
-  // --- Profile and Shopping Bag Icons ---
-  .nav-right {
-    a {
-      color: $primary-white;
+  .dropdown-menu {
+    border-radius: 12px;
+    border: 1px solid $border-light;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+
+    .dropdown-item {
+      font-size: 0.9rem;
+      padding: 8px 20px;
+      font-weight: 500;
 
       &:hover {
-        color: $primary-color;
+        background-color: #F8FAFC;
+        color: $primary-green;
       }
     }
   }
 }
 
-// --- Top Strip ---
-.top-strip {
-  background-color: $primary-color;
-  color: $primary-white;
-}
+// Search Pill
+.search-pill-wrapper {
+  background-color: $card-bg-gray;
+  border-radius: 50px;
+  padding: 6px 18px;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
 
-// --- Footer ---
-footer {
-  background-color: $tertiary-color;
-  color: $primary-white;
-  padding: 40px 0;
-  h2{
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  &:focus-within {
+    background-color: #FFFFFF;
+    border-color: #CBD5E1;
+    box-shadow: 0 0 0 3px rgba(0, 61, 41, 0.08);
   }
-  ul{
-    li{
-       margin-bottom: 10px;
-      a{
-        font-size: 1.2em;
-        color: $primary-white;
-       
-      }
+
+  .search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: $text-dark;
+    width: 100%;
+
+    &::placeholder {
+      color: #9CA3AF;
+      font-weight: 400;
     }
   }
 
-  a {
-    color: $primary-white;
+  .search-btn {
+    border: none;
+    background: transparent;
+    color: #4B5563;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 
     &:hover {
-      color: $primary-color;
+      color: $primary-green;
     }
-  }
-  .spotlight{
-    border-top: 1px solid rgba($primary-white, 0.10);
-    //margin-top: 24px;
-    //padding-top: 24px;
-     border-bottom: 1px solid rgba($primary-white, 0.10);
   }
 }
 
-// --- Homepage Slider ---
-.section-1 {
-  .swiper {
-    .swiper-wrapper {
-      .swiper-slide {
-        height: 750px;
+.nav-action-item {
+  color: $text-dark;
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
 
-        .content {
-          height: 100%;
-          width: 100%;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
+  &:hover {
+    color: $primary-green !important;
+
+    svg {
+      stroke: $primary-green;
+    }
+
+    span {
+      color: $primary-green !important;
+    }
+  }
+}
+
+// --- Hero Banner Section ---
+.hero-banner {
+  background-color: $accent-cream;
+  min-height: 420px;
+  border-radius: 24px !important;
+
+  .hero-heading {
+    color: $primary-green;
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  .btn-hero {
+    background-color: $primary-green;
+    color: $primary-white;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 14px rgba(0, 61, 41, 0.2);
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $primary-green-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 61, 41, 0.3);
+      color: $primary-white;
+    }
+  }
+
+  .hero-image-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-model-img {
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      mix-blend-mode: multiply; // Blends cleanly into warm cream
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.08));
+    }
+  }
+}
+
+// --- Filter Pills Bar ---
+.filter-pill {
+  background-color: $pill-bg;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 50px;
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #374151;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #E5E7EB;
+    color: $primary-green;
+  }
+
+  &.active {
+    background-color: $primary-green;
+    color: $primary-white;
+    border-color: $primary-green;
+
+    svg {
+      fill: $primary-white;
+    }
+  }
+}
+
+.filter-pill-all {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+
+  &:hover {
+    background-color: #F9FAFB;
+    border-color: #D1D5DB;
+  }
+}
+
+.filter-pill-sort {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+}
+
+// --- Section Titles ---
+.section-main-title {
+  color: $text-dark;
+  font-size: 1.85rem;
+  letter-spacing: -0.5px;
+}
+
+// --- Shopcart Product Cards ---
+.shopcart-product-card {
+  transition: transform 0.2s ease;
+
+  .card-media-box {
+    background-color: $card-bg-gray;
+    border-radius: 18px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.2s ease;
+
+    .product-hero-image {
+      max-height: 190px;
+      max-width: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      mix-blend-mode: multiply;
+    }
+
+    &:hover {
+      .product-hero-image {
+        transform: scale(1.08);
+      }
+    }
+
+    // Wishlist Heart Button
+    .wishlist-heart-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
+      z-index: 2;
+
+      &:hover {
+        transform: scale(1.12);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      &.liked {
+        background-color: #FEF2F2;
+      }
+    }
+  }
+
+  .card-info-box {
+    .product-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+
+      a:hover {
+        color: $primary-green !important;
+      }
+    }
+
+    .product-card-price {
+      font-size: 1.05rem;
+      color: $text-dark;
+    }
+
+    .btn-outline-cart {
+      border: 1.5px solid #1F2937;
+      color: #1F2937;
+      background: transparent;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: $primary-green;
+        border-color: $primary-green;
+        color: #FFFFFF;
       }
     }
   }
 }
 
-// --- Product Cards ---
+// --- Footer Styling ---
+.site-footer {
+  background-color: $primary-green;
+
+  .footer-title {
+    font-size: 1.1rem;
+    letter-spacing: -0.2px;
+  }
+
+  .footer-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.92rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #FFFFFF;
+      padding-left: 2px;
+    }
+  }
+
+  .spotlight-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    flex-shrink: 0;
+  }
+
+  .border-white-10 {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+}
+
+// --- Backward Compatibility for Existing Pages (e.g. Shop.jsx) ---
 .product-card {
   .card-img {
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 14px;
+    background-color: $card-bg-gray;
 
     img {
-      border-radius: 10px;
-      transform: scale(1);
+      border-radius: 14px;
       transition: transform 0.3s ease-out;
     }
   }
 
   &:hover {
     img {
-      transform: scale(1.2);
+      transform: scale(1.08);
     }
   }
 
   .card-body {
-    padding: 0;
+    padding: 12px 0 0 0;
 
     a {
-      font-size: 1.2em;
+      font-size: 1.05rem;
+      font-weight: 600;
+      &:hover {
+        color: $primary-green;
+      }
     }
 
     .price {
-      font-size: 1.2em;
-      padding-bottom: 20px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: $text-dark;
+      padding-top: 4px;
+      padding-bottom: 12px;
+
       span {
-        color: rgba($primary-black, 0.5);
+        color: rgba($text-dark, 0.45);
+        font-weight: 400;
       }
     }
   }
 }
 
-@media (min-width: 300px) and (max-width: 768px) {
-  .section-1 {
-    .swiper {
-      .swiper-wrapper {
-        .swiper-slide {
-          height: 400px;
-        }
-      }
-    }
+.btn-primary {
+  background-color: $primary-green;
+  border-color: $primary-green;
+  color: #FFFFFF;
+
+  &:hover {
+    background-color: $primary-green-dark;
+    border-color: $primary-green-dark;
   }
 }
